@@ -3,7 +3,7 @@
 import pandas as pd
 
 df = pd.read_csv("student.csv")
-filtered_df = df [(df["study_time"] >= 3) & (df["internet"] == 1) & (df["absences"] <= 5)]
+filtered_df = df [(df["studytime"] >= 3) & (df["internet"] == 1) & (df["absences"] <= 5)]
 
 filtered_df.to_csv("high_engagement.csv", index=False)
 
