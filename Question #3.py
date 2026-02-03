@@ -12,6 +12,9 @@ for index, line in enumerate(lines, start = 1):
     normalized = original.lower()
     normalized = normalized.translate(str.maketrans("", "", string.whitespace + string.punctuation))
 
+    if normalized == "":
+        continue
+
     if normalized in normalized_groups:
         normalized_groups[normalized].append((index, original))
     else:
