@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5053d6e7-6fdf-4358-a7a2-53ec64a63fdd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question #8.py" beforeDir="false" afterPath="$PROJECT_DIR$/Question #8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Question #9.py" beforeDir="false" afterPath="$PROJECT_DIR$/Question #9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +37,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Question #1.executor": "Run",
+    "Python.Question #10.executor": "Run",
     "Python.Question #2.executor": "Run",
     "Python.Question #3.executor": "Run",
     "Python.Question #4.executor": "Run",
