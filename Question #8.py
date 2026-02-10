@@ -11,18 +11,14 @@ headers = {
     "Referer": "https://www.google.com/"
 }
 
-# Send request
 response = requests.get(url, headers=headers)
 
-# Check request success
 if response.status_code != 200:
     print("Failed to retrieve page:", response.status_code)
     exit()
 
-# Parse HTML
 soup = BeautifulSoup(response.text, "html.parser")
 
-# Find real article content
 content = soup.find("div", id="mw-content-text")
 if content:
     content = content.find("div", class_="mw-parser-output")
@@ -34,8 +30,6 @@ if not content:
 exclude_words = ["References", "External links", "See also", "Notes"]
 
 headings = []
-
-# Extract headings
 for h2 in content.find_all("h2"):
 
     span = h2.find("span", class_="mw-headline")
@@ -45,14 +39,11 @@ for h2 in content.find_all("h2"):
     else:
         text = h2.get_text().strip()
 
-    # Remove edit text
     text = text.replace("[edit]", "").replace("Edit", "").strip()
 
-    # Filter unwanted headings (case-insensitive)
     if not any(word.lower() in text.lower() for word in exclude_words):
         headings.append(text)
 
-# Save to file
 with open("headings.txt", "w", encoding="utf-8") as f:
     for h in headings:
         f.write(h + "\n")
